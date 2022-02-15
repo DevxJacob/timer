@@ -4,7 +4,6 @@
 #include <util/delay.h>
 #include "increasing.h"
 
-
 void display_set_numbers( int * state){
       PORTB = ~ UNITS_PIN;
       PORTD = digits_array[*state];

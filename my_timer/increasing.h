@@ -3,8 +3,8 @@
 
 void increase_number(void);
 
-extern  int digits_array [10];
+extern int digits_array [10];
 extern int units;
-extern   int decimals;
+extern int decimals;
 
 #endif 

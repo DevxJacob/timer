@@ -19,17 +19,13 @@ void countdown (void){
             display_set_numbers(&units);
         }
         if (units > 0 && turn == 1){
-
             --units;
             display_set_numbers(&units);
-
         }
         else if( decimals > 0 && turn ==1){
-
             --decimals;
             units = 9;
              display_set_numbers(&units);
-
         }
     }
     if(turn) buzzer_on();

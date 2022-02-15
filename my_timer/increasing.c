@@ -3,9 +3,9 @@
 #include "display_set_numbers.h"
 #include <avr/io.h>
 
- int digits_array [10] = {64,121,36,48,25,18,2,120,0,16};
- int  units = 0;
- int decimals = 0;
+int digits_array [10] = {64,121,36,48,25,18,2,120,0,16};
+int  units = 0;
+int decimals = 0;
 
 void increase_number(void){
         if(units < 9 ){
