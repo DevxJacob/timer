@@ -14,5 +14,5 @@ void switch_control (void){
     if(!(SW_PIN_DECREASE & PINC)) _delay_ms(80);
     if(!(SW_PIN_DECREASE & PINC)) decrease_number();
     if(!(SW_PIN_START_COUNTDOWN & PINC)) _delay_ms(80);
-    if(!(SW_PIN_START_COUNTDOWN & PINC)) countdown();
+    if(!(SW_PIN_START_COUNTDOWN & PINC) && (units > 0 || decimals > 0)) countdown();
 }

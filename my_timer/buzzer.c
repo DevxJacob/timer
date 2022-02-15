@@ -10,19 +10,19 @@ void buzzer_on(void){
     while (n){
         for(int m = 0; m< 2; m++){
             PORTA = BUZ_PIN;
-            for(j = 0;j < 25; ++j){
+            for(j = 0;j < 20; ++j){
                 if(!(SW_PIN_TURN_BUZ_OFF & PINC)) _delay_ms(80);
                 if(!(SW_PIN_TURN_BUZ_OFF & PINC)) {n = 0; i = 100; j = 25;}
                 display_set_numbers(&units);
             }
             PORTA = SW_PIN_STOP_COUNTDOWN;
-            for(j = 0;j < 25; ++j){
+            for(j = 0;j < 20; ++j){
                 if(!(SW_PIN_TURN_BUZ_OFF & PINC)) _delay_ms(80);
                 if(!(SW_PIN_TURN_BUZ_OFF & PINC)) {n = 0; i = 100; j = 25;}
                 display_set_numbers(&units);
             }
         }
-        for(i =  0;i < 100; ++i){
+        for(i =  0;i < 50; ++i){
             if(!(SW_PIN_TURN_BUZ_OFF & PINC)) _delay_ms(80);
             if(!(SW_PIN_TURN_BUZ_OFF & PINC)) {n = 0; i = 100; j = 25;}
             display_set_numbers(&units);

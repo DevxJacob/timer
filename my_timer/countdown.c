@@ -11,11 +11,11 @@ void countdown (void){
 
     int i = decimals * 10 + units;
     int turn = 1;
-    
+
     for( ;i > 0; i-- ){
         for( int j = 0;j < 100; ++j){
             if(!(SW_PIN_STOP_COUNTDOWN & PINA)) _delay_ms(80);
-            if(!(SW_PIN_STOP_COUNTDOWN & PINA)) { i = 0; turn = 0; }
+            if(!(SW_PIN_STOP_COUNTDOWN & PINA)) { i = 0; turn = 0; j = 0; }
             display_set_numbers(&units);
         }
         if (units > 0 && turn == 1){
@@ -35,4 +35,3 @@ void countdown (void){
     if(turn) buzzer_on();
     display_set_numbers(&units);
 }
- 

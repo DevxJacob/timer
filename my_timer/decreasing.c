@@ -19,4 +19,4 @@ void decrease_number(void){
         decimals = 6;
         display_set_numbers(&units);
     }
-}
+} 
